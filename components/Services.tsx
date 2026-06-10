@@ -1,37 +1,32 @@
 import Link from 'next/link'
-import { Home, DollarSign, Heart, Shield, TrendingUp, Briefcase, ArrowRight } from 'lucide-react'
+import { UserPlus, Shield, TrendingUp, Briefcase, Repeat, ArrowRight } from 'lucide-react'
 
 export default function Services() {
   const services = [
     {
-      icon: Home,
-      title: 'Home Loans',
-      description: 'Competitive rates and flexible terms to make your dream home a reality with minimal documentation.',
-    },
-    {
-      icon: DollarSign,
-      title: 'Personal Loans',
-      description: 'Quick approval personal loans with transparent processes and customer-friendly disbursement.',
-    },
-    {
-      icon: Heart,
-      title: 'Life Insurance',
-      description: 'Comprehensive life insurance plans designed to protect your family\'s financial future.',
+      icon: UserPlus,
+      title: 'Recruitment of Financial Advisor',
+      description: 'Career-focused onboarding, product knowledge, and support for aspiring financial advisors.',
     },
     {
       icon: Shield,
-      title: 'General Insurance',
-      description: 'Protect your valuable assets with our comprehensive general insurance coverage options.',
+      title: 'Insurance',
+      description: 'Life and general insurance guidance to protect families, health, vehicles, and assets.',
     },
     {
       icon: TrendingUp,
-      title: 'Investments',
-      description: 'Expert investment guidance and portfolio management for long-term wealth creation.',
+      title: 'AIF',
+      description: 'Alternative Investment Fund access for eligible investors seeking diversified opportunities.',
     },
     {
       icon: Briefcase,
-      title: 'Wealth Management',
-      description: 'Personalized wealth management services tailored to your financial goals and risk profile.',
+      title: 'PMS',
+      description: 'Portfolio Management Services built around risk profile, goals, and disciplined reviews.',
+    },
+    {
+      icon: Repeat,
+      title: 'SIP',
+      description: 'Systematic investment planning that helps clients invest regularly toward long-term goals.',
     },
   ]
 

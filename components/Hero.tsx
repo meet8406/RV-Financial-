@@ -1,30 +1,36 @@
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, BriefcaseBusiness, ShieldCheck, TrendingUp, Repeat, Users } from 'lucide-react'
 
 export default function Hero() {
+  const highlights = [
+    { label: 'Recruitment', value: 'Advisor Network', icon: Users },
+    { label: 'Insurance', value: 'Protection Planning', icon: ShieldCheck },
+    { label: 'AIF', value: 'Alternative Strategies', icon: TrendingUp },
+    { label: 'PMS', value: 'Managed Portfolios', icon: BriefcaseBusiness },
+    { label: 'SIP', value: 'Monthly Discipline', icon: Repeat },
+  ]
+
   return (
-    <section className="section-surface fine-grid relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-secondary/30 via-background to-background pt-20">
-      {/* Background Decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="pulse-soft absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="pulse-soft delay-300 absolute bottom-40 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+    <section className="section-surface hero-grid relative min-h-screen overflow-hidden bg-background pt-20">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="hero-sweep absolute inset-0"></div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative flex min-h-[calc(100vh-5rem)] w-full items-center">
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_0.92fr] lg:px-8">
           {/* Left Content */}
           <div className="space-y-8">
-            <div className="reveal-up inline-flex items-center gap-2 px-4 py-2 bg-secondary/60 rounded-full border border-border shadow-sm backdrop-blur">
-              <div className="pulse-soft w-2 h-2 rounded-full bg-primary"></div>
+            <div className="reveal-up inline-flex items-center gap-2 rounded-full border border-border bg-card/85 px-4 py-2 shadow-sm backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-[color:var(--chart-4)]"></span>
               <span className="text-sm font-medium text-foreground">Your Trusted Financial Partner Since 2010</span>
             </div>
 
             <div className="reveal-up delay-100 space-y-4">
-              <h1 className="text-5xl md:text-6xl font-bold text-primary leading-tight text-balance">
+              <h1 className="max-w-3xl text-5xl font-bold leading-tight text-primary text-balance md:text-6xl">
                 Create Wealth With Wisdom
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-                From home loans to wealth management, we provide comprehensive financial services designed to help you achieve your dreams and secure your future.
+              <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
+                From recruitment of financial advisors to Insurance, AIF, PMS, and SIP solutions, we provide focused financial services designed to help you grow with confidence.
               </p>
             </div>
 
@@ -45,16 +51,16 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div className="reveal-up delay-300 grid grid-cols-3 gap-6 pt-8">
-              <div className="rounded-xl border border-border/70 bg-card/60 p-4 shadow-sm backdrop-blur transition-transform duration-300 hover:-translate-y-1">
+            <div className="reveal-up delay-300 grid grid-cols-3 gap-3 pt-4 sm:gap-6">
+              <div className="rounded-lg border border-border/70 bg-card/80 p-4 shadow-sm backdrop-blur transition-transform duration-300 hover:-translate-y-1">
                 <p className="text-3xl font-bold text-primary">50K+</p>
                 <p className="text-sm text-muted-foreground">Happy Clients</p>
               </div>
-              <div className="rounded-xl border border-border/70 bg-card/60 p-4 shadow-sm backdrop-blur transition-transform duration-300 hover:-translate-y-1">
+              <div className="rounded-lg border border-border/70 bg-card/80 p-4 shadow-sm backdrop-blur transition-transform duration-300 hover:-translate-y-1">
                 <p className="text-3xl font-bold text-primary">₹2000Cr+</p>
                 <p className="text-sm text-muted-foreground">Assets Managed</p>
               </div>
-              <div className="rounded-xl border border-border/70 bg-card/60 p-4 shadow-sm backdrop-blur transition-transform duration-300 hover:-translate-y-1">
+              <div className="rounded-lg border border-border/70 bg-card/80 p-4 shadow-sm backdrop-blur transition-transform duration-300 hover:-translate-y-1">
                 <p className="text-3xl font-bold text-primary">15+</p>
                 <p className="text-sm text-muted-foreground">Years Experience</p>
               </div>
@@ -62,23 +68,58 @@ export default function Hero() {
           </div>
 
           {/* Right Visual */}
-          <div className="reveal-scale delay-300 relative hidden md:block">
-            <div className="float-soft relative aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 via-card/80 to-accent/20 border border-border p-8 shadow-2xl shadow-primary/15">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10"></div>
-              
-              {/* Placeholder Cards */}
-              <div className="absolute top-8 right-8 w-32 h-20 bg-card rounded-lg shadow-lg p-3 border border-border transform hover:scale-105 transition-transform">
-                <p className="text-xs font-semibold text-primary mb-2">Investment Returns</p>
-                <p className="text-2xl font-bold text-foreground">12.5%</p>
-              </div>
-              
-              <div className="absolute bottom-12 left-8 w-32 h-20 bg-card rounded-lg shadow-lg p-3 border border-border transform hover:scale-105 transition-transform">
-                <p className="text-xs font-semibold text-primary mb-2">Loan Approved</p>
-                <p className="text-xl font-bold text-foreground">₹50 Lakhs</p>
+          <div className="reveal-scale delay-300 relative hidden lg:block">
+            <div className="hero-console rounded-xl border border-border bg-card/90 p-6 shadow-2xl shadow-primary/15 backdrop-blur">
+              <div className="mb-6 flex items-start justify-between gap-6 border-b border-border pb-5">
+                <div>
+                  <p className="text-sm font-semibold text-muted-foreground">Service Desk</p>
+                  <h2 className="mt-1 text-2xl font-bold text-primary">Financial Growth Console</h2>
+                </div>
+                <div className="rounded-lg border border-border bg-secondary/70 px-4 py-3 text-right">
+                  <p className="text-xs font-semibold text-muted-foreground">Advisor Call</p>
+                  <p className="text-lg font-bold text-foreground">Ready</p>
+                </div>
               </div>
 
-              <div className="pulse-soft absolute top-1/3 left-1/2 transform -translate-x-1/2 w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-3xl font-bold shadow-2xl shadow-primary/20">
-                ₹
+              <div className="space-y-3">
+                {highlights.map((item, index) => {
+                  const Icon = item.icon
+                  return (
+                    <div
+                      key={item.label}
+                      className="hero-service-row flex items-center gap-4 rounded-lg border border-border bg-background/70 p-4"
+                      style={{ animationDelay: `${index * 130}ms` }}
+                    >
+                      <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                        <Icon size={22} />
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center justify-between gap-4">
+                          <p className="font-semibold text-foreground">{item.label}</p>
+                          <p className="text-xs font-medium text-muted-foreground">{item.value}</p>
+                        </div>
+                        <div className="mt-3 h-2 overflow-hidden rounded-full bg-secondary">
+                          <div
+                            className="hero-progress h-full rounded-full"
+                            style={{
+                              width: `${68 + index * 6}%`,
+                              animationDelay: `${200 + index * 150}ms`,
+                            }}
+                          ></div>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+
+              <div className="mt-6 grid grid-cols-3 gap-3">
+                {['AIF', 'PMS', 'SIP'].map((label, index) => (
+                  <div key={label} className="rounded-lg border border-border bg-secondary/50 p-4">
+                    <p className="text-xs font-semibold text-muted-foreground">{label}</p>
+                    <p className="mt-2 text-xl font-bold text-primary">{index === 0 ? 'Curated' : index === 1 ? 'Managed' : 'Monthly'}</p>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

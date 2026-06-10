@@ -46,10 +46,11 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4">Products</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link href="/contact?product=home-loan" className="hover:text-primary transition-colors">Home Loan</Link></li>
-              <li><Link href="/contact?product=personal-loan" className="hover:text-primary transition-colors">Personal Loan</Link></li>
-              <li><Link href="/contact?product=life-insurance" className="hover:text-primary transition-colors">Life Insurance</Link></li>
-              <li><Link href="/contact?product=mutual-fund" className="hover:text-primary transition-colors">Mutual Funds</Link></li>
+              <li><Link href="/contact?product=recruitment-financial-advisor" className="hover:text-primary transition-colors">Recruitment</Link></li>
+              <li><Link href="/contact?product=insurance" className="hover:text-primary transition-colors">Insurance</Link></li>
+              <li><Link href="/contact?product=aif" className="hover:text-primary transition-colors">AIF</Link></li>
+              <li><Link href="/contact?product=pms" className="hover:text-primary transition-colors">PMS</Link></li>
+              <li><Link href="/contact?product=sip" className="hover:text-primary transition-colors">SIP</Link></li>
             </ul>
           </div>
 
@@ -59,15 +60,15 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex gap-2">
                 <Phone size={16} className="flex-shrink-0 mt-0.5" />
-                <span>1800-123-4567</span>
+                <span>+91 91753 67610</span>
               </li>
               <li className="flex gap-2">
                 <Mail size={16} className="flex-shrink-0 mt-0.5" />
-                <span>hello@rvfinancial.com</span>
+                <span>RVfinancialservices111@gmail.com</span>
               </li>
               <li className="flex gap-2">
                 <MapPin size={16} className="flex-shrink-0 mt-0.5" />
-                <span>New Delhi, India</span>
+                <span>Gloria, Nyati Esplanade, Bavdhan</span>
               </li>
             </ul>
           </div>
@@ -94,7 +95,7 @@ export default function Footer() {
 
             {/* Copyright */}
             <div className="text-right text-sm opacity-75">
-              <p>© 2010-2024 RV Financial Services. All rights reserved.</p>
+              <p>© 2010-2026 RV Financial Services. All rights reserved.</p>
             </div>
           </div>
         </div>

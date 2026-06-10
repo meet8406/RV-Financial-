@@ -1,83 +1,48 @@
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { Home, Users, Heart, Shield, Zap, PieChart, Lock, TrendingUp, Database, Briefcase } from 'lucide-react'
+import { UserPlus, Shield, TrendingUp, Briefcase, Repeat } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Products() {
   const products = [
     {
-      icon: Home,
-      title: 'Home Loan',
-      category: 'Loans',
-      description: 'Purchase or construct your dream home with our flexible home loan options.',
-      benefits: ['Up to 30 years tenure', 'Up to 90% LTV', 'Pre-approval facility', 'Free home loan insurance'],
-    },
-    {
-      icon: Users,
-      title: 'Personal Loan',
-      category: 'Loans',
-      description: 'Instant personal loans for any purpose without collateral requirements.',
-      benefits: ['Instant approval', 'No collateral needed', 'Flexible repayment', 'Transparent pricing'],
-    },
-    {
-      icon: Heart,
-      title: 'Life Insurance',
-      category: 'Insurance',
-      description: 'Secure your family\'s financial future with comprehensive life insurance coverage.',
-      benefits: ['Online enrollment', 'Cashless claims', 'Multiple plan options', 'Tax benefits (Section 80C)'],
+      icon: UserPlus,
+      title: 'Recruitment of Financial Advisor',
+      category: 'Recruitment',
+      description: 'Advisor recruitment and onboarding for people looking to build a financial services career.',
+      benefits: ['Advisor onboarding', 'Product training', 'Client engagement support', 'Growth-focused guidance'],
     },
     {
       icon: Shield,
-      title: 'General Insurance',
+      title: 'Insurance',
       category: 'Insurance',
-      description: 'Complete protection for your health, vehicle, and property with general insurance.',
-      benefits: ['24/7 claim support', 'Network hospitals', 'Quick settlement', 'Customizable coverage'],
-    },
-    {
-      icon: PieChart,
-      title: 'Mutual Funds',
-      category: 'Investments',
-      description: 'Diversified mutual fund investments to build long-term wealth.',
-      benefits: ['Low minimum investment', 'SIP options', 'Expert management', 'Transparent NAVs'],
-    },
-    {
-      icon: Zap,
-      title: 'NCD (Non-Convertible Debentures)',
-      category: 'Investments',
-      description: 'Fixed income securities with attractive interest rates and defined maturity.',
-      benefits: ['Fixed returns', 'Higher yields', 'Secured investment', 'Tax-efficient'],
-    },
-    {
-      icon: Briefcase,
-      title: 'Private Equity',
-      category: 'Alternative Investments',
-      description: 'Direct equity investment opportunities in high-growth companies.',
-      benefits: ['High growth potential', 'Professional management', 'Portfolio diversification', 'Exit opportunities'],
+      description: 'Insurance guidance for life, health, vehicle, property, and other protection needs.',
+      benefits: ['Life insurance', 'General insurance', 'Plan comparison', 'Claim support guidance'],
     },
     {
       icon: TrendingUp,
-      title: 'Equity Trading',
-      category: 'Investments',
-      description: 'Direct access to stock market with competitive trading and brokerage rates.',
-      benefits: ['Low brokerage fees', 'Advanced trading tools', 'Real-time research', 'Expert advisory'],
-    },
-    {
-      icon: Database,
-      title: 'Demat Account',
-      category: 'Investments',
-      description: 'Secure dematerialization of securities for seamless stock trading.',
-      benefits: ['Instant opening', 'Zero maintenance fee', 'Online management', 'Multiple exchange access'],
-    },
-    {
-      icon: Lock,
-      title: 'Alternative Investment Fund',
+      title: 'AIF',
       category: 'Alternative Investments',
-      description: 'Curated alternative investment opportunities for wealth diversification.',
-      benefits: ['Portfolio diversification', 'Professional selection', 'Risk management', 'Inflation hedge'],
+      description: 'Alternative Investment Funds for eligible investors seeking diversified strategies.',
+      benefits: ['Curated fund access', 'Portfolio diversification', 'Professional selection', 'Risk profiling'],
+    },
+    {
+      icon: Briefcase,
+      title: 'PMS',
+      category: 'Portfolio Management',
+      description: 'Portfolio Management Services for clients who need professionally managed portfolios.',
+      benefits: ['Personalized strategy', 'Professional management', 'Regular reviews', 'Goal-based allocation'],
+    },
+    {
+      icon: Repeat,
+      title: 'SIP',
+      category: 'Systematic Investments',
+      description: 'Systematic investment plans to help clients invest consistently toward financial goals.',
+      benefits: ['Monthly investing', 'Goal planning', 'Long-term compounding', 'Flexible contribution'],
     },
   ]
 
-  const categories = ['All', 'Loans', 'Insurance', 'Investments', 'Alternative Investments']
+  const categories = ['All', 'Recruitment', 'Insurance', 'Alternative Investments', 'Portfolio Management', 'Systematic Investments']
 
   return (
     <main className="page-fade">

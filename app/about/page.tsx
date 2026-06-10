@@ -42,8 +42,8 @@ export default function About() {
     },
     {
       name: 'Amit Patel',
-      role: 'Head of Retail Banking',
-      expertise: 'Loans & Customer Relations',
+      role: 'Head of Advisor Network',
+      expertise: 'Financial Advisor Recruitment & Customer Relations',
     },
     {
       name: 'Deepika Singh',

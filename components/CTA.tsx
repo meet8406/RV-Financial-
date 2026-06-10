@@ -27,7 +27,7 @@ export default function CTA() {
             <ArrowRight size={20} />
           </Link>
           <Link
-            href="tel:+918000000000"
+            href="tel:+919175367610"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border-2 border-primary-foreground text-primary-foreground font-semibold transition-all duration-300 hover:-translate-y-1 hover:bg-primary-foreground/10"
           >
             <Phone size={20} />
@@ -39,11 +39,11 @@ export default function CTA() {
         <div className="mt-12 grid md:grid-cols-2 gap-6">
           <div className="flex items-center justify-center gap-3 text-primary-foreground rounded-xl bg-white/10 p-4 backdrop-blur">
             <Phone size={20} />
-            <span>1800-123-4567 (Toll Free)</span>
+            <span>+91 91753 67610</span>
           </div>
           <div className="flex items-center justify-center gap-3 text-primary-foreground rounded-xl bg-white/10 p-4 backdrop-blur">
             <Mail size={20} />
-            <span>hello@rvfinancial.com</span>
+            <span>RVfinancialservices111@gmail.com</span>
           </div>
         </div>
       </div>

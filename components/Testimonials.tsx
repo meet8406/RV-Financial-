@@ -4,8 +4,8 @@ export default function Testimonials() {
   const testimonials = [
     {
       name: 'Rajesh Sharma',
-      role: 'Home Loan Customer',
-      content: 'RV Financial Services made the entire home loan process seamless. Fast approval, transparent process, and excellent customer support. Highly recommended!',
+      role: 'SIP Client',
+      content: 'RV Financial Services helped me start a disciplined SIP plan with clear goal mapping and regular guidance. The process was simple and transparent.',
       rating: 5,
     },
     {
@@ -17,8 +17,8 @@ export default function Testimonials() {
     },
     {
       name: 'Arjun Patel',
-      role: 'Personal Loan Customer',
-      content: 'Needed funds urgently for my business expansion. RV Financial approved my loan within 24 hours. Professional team, zero hassle!',
+      role: 'Financial Advisor',
+      content: 'The recruitment and onboarding support helped me understand the products, process, and client approach needed to grow as a financial advisor.',
       rating: 5,
     },
     {

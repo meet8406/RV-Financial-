@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { buildInquiryMailto } from '@/lib/inquiry-mail'
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -34,8 +35,16 @@ export default function ContactPage() {
     setSubmitStatus('idle')
 
     try {
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1000))
+      const mailto = buildInquiryMailto({
+        source: 'Contact form',
+        name: `${formData.firstName} ${formData.lastName}`,
+        email: formData.email,
+        phone: formData.phone,
+        interest: formData.product,
+        message: formData.message,
+      })
+
+      window.location.href = mailto
       setSubmitStatus('success')
       setFormData({
         firstName: '',
@@ -55,16 +64,11 @@ export default function ContactPage() {
   }
 
   const products = [
-    'Home Loan',
-    'Personal Loan',
-    'Life Insurance',
-    'General Insurance',
-    'Mutual Funds',
-    'NCD',
-    'Private Equity',
-    'Equity Trading',
-    'Demat Account',
-    'Alternative Investments',
+    'Recruitment of Financial Advisor',
+    'Insurance',
+    'AIF',
+    'PMS',
+    'SIP',
   ]
 
   return (
@@ -93,7 +97,7 @@ export default function ContactPage() {
                   <Phone size={24} className="text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-primary mb-2">Phone</h3>
-                <p className="text-muted-foreground mb-1">Toll Free: 1800-123-4567</p>
+                <p className="text-muted-foreground mb-1">+91 91753 67610</p>
                 <p className="text-muted-foreground">Mon - Sun: 9 AM - 6 PM</p>
               </div>
 
@@ -102,7 +106,7 @@ export default function ContactPage() {
                   <Mail size={24} className="text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-primary mb-2">Email</h3>
-                <p className="text-muted-foreground mb-1">hello@rvfinancial.com</p>
+                <p className="text-muted-foreground mb-1">RVfinancialservices111@gmail.com</p>
                 <p className="text-muted-foreground">Response within 2 hours</p>
               </div>
 
@@ -111,8 +115,8 @@ export default function ContactPage() {
                   <MapPin size={24} className="text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-primary mb-2">Office</h3>
-                <p className="text-muted-foreground mb-1">New Delhi, India</p>
-                <p className="text-muted-foreground">Regional offices nationwide</p>
+                <p className="text-muted-foreground mb-1">Gloria, Nyati Esplanade</p>
+                <p className="text-muted-foreground">Bavdhan</p>
               </div>
             </div>
 
@@ -229,7 +233,7 @@ export default function ContactPage() {
                   {/* Status Messages */}
                   {submitStatus === 'success' && (
                     <div className="p-4 rounded-lg bg-green-50 border border-green-200 text-green-800">
-                      Thank you! We've received your message and will get back to you shortly.
+                      Your email app has opened with your inquiry addressed to RV Financial Services.
                     </div>
                   )}
                   {submitStatus === 'error' && (
@@ -264,9 +268,9 @@ export default function ContactPage() {
                 <h3 className="text-lg font-semibold text-foreground mb-4">Expected Response Times</h3>
                 <ul className="space-y-2 text-muted-foreground">
                   <li>• General Inquiries: 2-4 hours</li>
-                  <li>• Loan Applications: 24 hours</li>
+                  <li>• Recruitment Queries: 24 hours</li>
                   <li>• Insurance Queries: 6-12 hours</li>
-                  <li>• Investment Advice: 24-48 hours</li>
+                  <li>• AIF, PMS & SIP Guidance: 24-48 hours</li>
                 </ul>
               </div>
             </div>

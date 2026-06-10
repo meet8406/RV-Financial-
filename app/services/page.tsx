@@ -1,45 +1,39 @@
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
-import { BarChart3, Home, Award, Shield, TrendingUp, Wallet } from 'lucide-react'
+import { UserPlus, Shield, TrendingUp, Briefcase, Repeat } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Services() {
   const services = [
     {
-      icon: Home,
-      title: 'Home Loan',
-      description: 'Affordable home loans with flexible repayment terms and competitive interest rates for your dream home.',
-      features: ['Low Interest Rates', 'Fast Approval', 'Flexible Tenure', 'Easy Documentation'],
-    },
-    {
-      icon: Wallet,
-      title: 'Personal Loan',
-      description: 'Quick personal loans without collateral for all your financial needs with minimal documentation.',
-      features: ['Instant Approval', 'No Collateral', 'Quick Disbursal', 'Easy EMI Options'],
+      icon: UserPlus,
+      title: 'Recruitment of Financial Advisor',
+      description: 'Advisor recruitment support for candidates who want to grow in financial services.',
+      features: ['Advisor Onboarding', 'Product Training', 'Client Handling Support', 'Career Growth'],
     },
     {
       icon: Shield,
-      title: 'Life Insurance',
-      description: 'Comprehensive life insurance plans to protect your family\'s financial future.',
-      features: ['Family Protection', 'Cashless Claims', 'Multiple Plans', 'Tax Benefits'],
-    },
-    {
-      icon: Award,
-      title: 'General Insurance',
-      description: 'Complete insurance solutions for your health, vehicle, and property needs.',
-      features: ['24/7 Support', 'Quick Settlement', 'Comprehensive Coverage', 'Online Claims'],
+      title: 'Insurance',
+      description: 'Protection planning across life and general insurance needs.',
+      features: ['Life Cover', 'General Insurance', 'Plan Guidance', 'Claim Support'],
     },
     {
       icon: TrendingUp,
-      title: 'Investment Advisory',
-      description: 'Expert investment guidance to grow your wealth through smart investment decisions.',
-      features: ['Portfolio Planning', 'Risk Assessment', 'Regular Monitoring', 'Expert Advice'],
+      title: 'AIF',
+      description: 'Alternative Investment Fund guidance for suitable eligible investors.',
+      features: ['Fund Selection', 'Risk Profiling', 'Diversification', 'Professional Review'],
     },
     {
-      icon: BarChart3,
-      title: 'Wealth Management',
-      description: 'Holistic wealth management solutions for long-term financial goals and prosperity.',
-      features: ['Asset Allocation', 'Tax Planning', 'Retirement Planning', 'Estate Planning'],
+      icon: Briefcase,
+      title: 'PMS',
+      description: 'Portfolio Management Services aligned with goals, risk profile, and review discipline.',
+      features: ['Managed Portfolio', 'Asset Allocation', 'Regular Monitoring', 'Expert Advice'],
+    },
+    {
+      icon: Repeat,
+      title: 'SIP',
+      description: 'Systematic investment planning for disciplined and long-term wealth creation.',
+      features: ['Monthly Investing', 'Goal Planning', 'Flexible Amounts', 'Long-Term Compounding'],
     },
   ]
 
